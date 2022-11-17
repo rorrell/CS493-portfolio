@@ -1,0 +1,11 @@
+.ctr {
+    text-align: center;
+}
+
+.ctr ul {
+    list-style-position: inside;
+}
+
+body, button {
+    font-size: x-large;
+}

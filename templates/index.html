@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block main %}
+<div class="ctr">
+  <h1>Welcome to Rachel's OAuth App</h1>
+  <p class="block">
+    By clicking the button below, you will be redirected to login with a Google account and grant permission to
+    access your email and profile information.
+  </p>
+  <button onclick="window.location='/send-to-oauth'">Visit Google OAuth 2.0 Endpoint</button>
+</div>
+{% endblock main %}

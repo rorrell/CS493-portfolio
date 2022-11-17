@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Hi, {{ data['givenName'] }}
+{% endblock %}
+
+{% block main %}
+<div class="ctr">
+  Hello!
+  <ul>
+    <li>Your display name is {{ data['displayName'] }}</li>
+    <li>Your user ID is {{ id }}</li>
+    <li>The value of the JWT is <div id="jwt">{{ jwt }}</div></li>
+    <li><button onclick="copyFunc()">Copy JWT</button></li>
+  </ul>
+</div>
+{% endblock %}
+
+{% block script %}
+<script lang="Javascript">
+function copyFunc() {
+	var el = document.getElementById("jwt"); //get element id
+	navigator.clipboard.writeText(el.innerText).then(function () {
+      alert("Text copied");
+  });
+}
+</script>
+{% endblock %}
